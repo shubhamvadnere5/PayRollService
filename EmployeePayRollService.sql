@@ -11,4 +11,5 @@ create table  emppayroll(
       StartDate date
 );
 
-
+--UC3 Insert Operation--
+insert into emppayroll(Name,Salary,StartDate) values('Shubham','4567','2021-10-11'),('Varun','23456','2021-10-12'),('Rohit','6789','2021-10-09');
