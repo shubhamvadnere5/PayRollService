@@ -20,3 +20,8 @@ select * from emppayroll;
 --UC5 Retrive data using where condition--
 Select Name,StartDate from emppayroll where Name='Shubham'; 
 select * from emppayroll where StartDate between cast('2018-01-03' as date) and getdate(); 
+
+--UC6 Update Data--
+alter table emppayroll add Gender char(1);
+update emppayroll set Gender='M';
+update emppayroll set Gender='M' where Id='1';
