@@ -16,3 +16,7 @@ insert into emppayroll(Name,Salary,StartDate) values('Shubham','4567','2021-10-1
 
 --UC4 Select * from Employee Table--
 select * from emppayroll;
+
+--UC5 Retrive data using where condition--
+Select Name,StartDate from emppayroll where Name='Shubham'; 
+select * from emppayroll where StartDate between cast('2018-01-03' as date) and getdate(); 
