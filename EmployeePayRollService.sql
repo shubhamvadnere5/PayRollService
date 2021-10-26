@@ -25,3 +25,11 @@ select * from emppayroll where StartDate between cast('2018-01-03' as date) and 
 alter table emppayroll add Gender char(1);
 update emppayroll set Gender='M';
 update emppayroll set Gender='M' where Id='1';
+
+-------------------------Uc7----------------------------------------
+----calculate sum,avergae,min,max,count of employee ased on gender---
+select SUM(Salary) as TotalSalary,Gender from emppayroll group by Gender;
+select AVG(Salary) as AverageSalary from emppayroll group by Gender;
+select count(Salary) as TotalSalary,Gender from emppayroll group by Gender;
+select Min(Salary) as MinSalary,Gender from emppayroll group by Gender;
+select Max(Salary) as MaxSalary,Gender from emppayroll group by Gender;
