@@ -26,10 +26,16 @@ alter table emppayroll add Gender char(1);
 update emppayroll set Gender='M';
 update emppayroll set Gender='M' where Id='1';
 
--------------------------Uc7----------------------------------------
+------------------------Uc7----------------------------------------
 ----calculate sum,avergae,min,max,count of employee ased on gender---
 select SUM(Salary) as TotalSalary,Gender from emppayroll group by Gender;
 select AVG(Salary) as AverageSalary from emppayroll group by Gender;
 select count(Salary) as TotalSalary,Gender from emppayroll group by Gender;
 select Min(Salary) as MinSalary,Gender from emppayroll group by Gender;
 select Max(Salary) as MaxSalary,Gender from emppayroll group by Gender;
+
+--UC8 storing emp information--
+alter table emppayroll add Emp_Phone_no bigint ;
+alter table emppayRoll add Department varchar(50) not null default 'HR' ;
+update emppayroll set Department='IT' where ID=1;
+alter table emppayRoll add Address varchar(100) default 'Mumbai';
