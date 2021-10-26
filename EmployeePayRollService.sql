@@ -49,3 +49,7 @@ Update emppayroll set NetPay = (NetPay-Deduction);
 Update emppayroll set TaxablePay = '1000';
 Update emppayroll set IncomeTax = '200';
 select * from emppayroll;
+
+---UC10---
+INSERT INTO emppayRoll (Name,Salary,StartDate,Gender,Emp_phone_no,Department,Address,NetPay,Deduction,TaxablePay)
+ VALUES ('Terissa','123424.12','2009-10-11','F','8908765456','Marketing','surat','812213','90000','1600');
